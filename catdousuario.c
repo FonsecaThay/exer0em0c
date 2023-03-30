@@ -4,8 +4,8 @@
 int main(){
      char stringA[15];
      char atringB[15];
-     scanf("%s", stringA);
-     scanf("%s", stringB);
+     scanf("String A: %s", stringA);
+     scanf("String B: %s", stringB);
      
      strcat(stringA, stringB);
      printf("%s", stringA);
