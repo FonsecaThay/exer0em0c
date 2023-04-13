@@ -1,0 +1,11 @@
+/*Escreva um programa em C que crie um arquivo de texto e escreva nesse texto.*/
+#include <stdio.h>
+int main(){
+FILE *fptr;
+fptr = fopen("filename.txt", "w");
+fprintf(fptr, "Feliz Aniversário!! :)");
+fclose(fptr);
+
+return 0;
+
+}
