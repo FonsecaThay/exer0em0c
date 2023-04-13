@@ -2,21 +2,22 @@
 aleatórios de compreendidos entre 1 e 50. Use função.*/
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include "funcao.h"
 
 int main() {
-    int i, tam;
+    int tam;
     int *vetor;
     printf("Tamanho do vetor: ");
     scanf("%d", &tam);
     vetor = malloc(tam * sizeof(int));
-    srand(time(NULL));
-    for (i = 0; i < tam; i++) {
-        vetor[i] = rand() % 50 + 1;
-    }
-    for (i = 0; i < tam; i++) {
+    vetor_randomico(vetor, tam);
+    return 0;
+}
+
+"funcao.h"
+    void vetor_randomico(int *vetor, int tam){
+    for(int i = 0; i<= tam; i++){
+        vetor[i] = rand() %50;
         printf("%d\n", vetor[i]);
     }
-    free(vetor);
-    return 0;
 }
